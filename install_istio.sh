@@ -48,6 +48,9 @@ $OC adm policy add-scc-to-user anyuid -z istio-pilot-service-account -n istio-sy
 $OC adm policy add-scc-to-user anyuid -z istio-sidecar-injector-service-account -n istio-system
 $OC adm policy add-scc-to-user anyuid -z istio-galley-service-account -n istio-system
 
+# Install Istio’s Custom Resource Definitions
+kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+
 # Install Istio without mutual TLS authentication between sidecars
 $OC apply -f $DIR_ISTIO/install/kubernetes/istio-demo.yaml
 
