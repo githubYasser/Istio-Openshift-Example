@@ -54,6 +54,13 @@ kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
 # Install Istio without mutual TLS authentication between sidecars
 $OC apply -f $DIR_ISTIO/install/kubernetes/istio-demo.yaml
 
+$OC project istio-system
+$OC expose svc istio-ingressgateway
+$OC expose svc servicegraph
+$OC expose svc grafana
+$OC expose svc prometheus
+$OC expose svc tracing
+
 # Verifying the installation
 kubectl get svc -n istio-system
 
