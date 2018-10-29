@@ -8,9 +8,21 @@ $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 ```
 
-
 # Install Openshift and Istio
 
 ```
-./install_istion.sh
+./install.sh
+```
+
+
+# Install EFK-Stack (Elasticsearch-fluentd-Kibana)
+
+```
+/istio_files/deploy_logging.sh
+```
+
+# Install Kiali
+
+```
+./kiali.sh
 ```
