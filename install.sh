@@ -67,4 +67,4 @@ kubectl get svc -n istio-system
 # Ensure the corresponding Kubernetes pods are deployed and all containers are up and running:
 kubectl get pods -n istio-system
 
-# Deploy sample application
+# Next Deploy sample application
