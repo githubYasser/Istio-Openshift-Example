@@ -24,4 +24,4 @@ curl https://raw.githubusercontent.com/kiali/kiali/${VERSION_LABEL}/deploy/kuber
   VERBOSE_MODE=4  \
   IMAGE_PULL_POLICY_TOKEN="imagePullPolicy: Always" envsubst | kubectl create -n istio-system -f -
 
-# loging to kiali ui with admi:admin
+# loging to kiali ui with admin:admin
